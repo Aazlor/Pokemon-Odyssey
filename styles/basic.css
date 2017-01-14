@@ -1,0 +1,1169 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'PokemonGB'; /*a name to be used later*/
+	src: url('fonts/Pokemon GB.ttf'); /*URL to font*/
+}
+
+body {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: block;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'PokemonGB';
+	font-size: 12px;
+	cursor: default;
+}
+
+.Clear {
+	display: block;
+	height: 0;
+	width: 0;
+	font-size: 0;
+	clear: both;
+}
+
+#ViewPort {
+	display: block;
+	position: fixed;
+	margin: 0 auto;
+	width: 100vw;
+	height: 100vh;
+	min-width: 800px;
+	min-height: 600px;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	border: 1vw;
+	border-style: ridge;
+	border-color: crimson;
+	transition: .5s;
+}
+
+#ViewPort.fade {
+	opacity: .4;
+	transition: .5s;
+}
+
+#Wrapper {
+	height: 800px;
+	width: 800px;
+	position: absolute;
+}
+
+#Background {
+	position: absolute;
+	background: url(../sprites/grass_tile.png);
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+}
+
+#Trainer {
+	display: block;
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#Trainer .Sprite {
+	height: 45px;
+	width: 31px;
+	display: block;
+	background-image: url('../sprites/trainer-down.png');
+	background-position: left; bottom;
+	background-repeat: repeat;
+	position: absolute;
+	bottom: 0;
+	left: -9px;
+}
+
+.Shadow {
+	display: block;
+	width: calc(80%);
+	height: 20%;
+	position: absolute;
+	top: 88%;
+	left: 10%;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,.35);
+	z-index: -1;
+}
+
+@keyframes TrainerWalking {
+	100% { background-position: -124px 0; }
+}
+
+.solid {
+}
+
+.encounter {
+}
+
+.depth {
+	position: absolute;
+}
+
+.depth > div {
+	display: inline-block;
+}
+
+.tinyTree {
+	width: 18px;
+	height: 25px;
+	position: absolute;
+	top: 35%;
+	left: 35%;
+	background: url(../sprites/tree_tiny.png);
+}
+
+.grassyRock {
+	width: 40px;
+	height: 36px;
+	position: absolute;
+	top: 70%;
+	right: 35%;
+	display: block;
+}
+
+.grassyRock::before {
+	content: "";
+	height: 61px;
+	width: 94px;
+	display: block;
+	background: url(../sprites/terrain/grassy_rock.png) center center;
+	position: absolute;
+	left: -29px;
+	top: -10px;
+}
+
+.tallGrass {
+	height: 16px;
+	width: 16px;
+	display: block;
+	position: relative;
+}
+
+.tallGrass::before {
+	content: "";
+	display: block;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	background: url(../sprites/terrain/tall_grass.png);
+}
+
+
+
+
+
+/*COMBAT*/
+#Combat {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70vw;
+	height: 70vh;
+	background-color: rgba(0,0,0,.5);
+	display: none;
+	z-index: 999;
+	border-radius: 20px;
+	border-style: ridge;
+	border-color: crimson;
+	border: 1%;
+	overflow: hidden;
+	max-width: 800px;
+}
+
+#Combat .box {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: block;
+	background: #fff;
+	border: 3px solid #000;
+	border-radius: 20px;
+	height: 20%;
+	font-size: 2vmin;
+}
+
+#Combat .box p {
+	line-height: 1.6em;
+	padding: 1em 2em;
+}
+
+#Combat .box p b {
+	text-transform: uppercase;
+}
+
+.Platform {
+	position: relative;
+	display: inline-block;
+	vertical-align: bottom;
+	width: 158px;
+	height: 55px;
+}
+
+.Platform::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(../sprites/battle/platform_grass.png);
+}
+
+.Platform .Poke {
+	position: absolute;
+	left: 50%;
+	bottom: 30%;
+	transform:translateX(-50%);
+}
+
+.Trainer {
+	position: absolute;
+	bottom: 25%;
+	left: 5%;
+	width: 90%;
+	text-align: justify;
+	display: none;
+}
+
+.Trainer .Platform {
+	vertical-align: top;
+	transform: translateY(-30%);
+}
+
+.Trainer .Platform img {
+	transition: 1s;
+}
+
+.blur {
+	transition: 1s;
+	filter: blur(30px);
+}
+
+.Enemy {
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	width: 90%;	
+	text-align: justify;
+	display: none;
+}
+
+
+.Enemy .Platform {
+	vertical-align: top;
+	transform: translateY(30%);
+}
+
+.Trainer::after, .Enemy::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 0;	
+}
+
+.text_arrow {
+	position: absolute;
+	bottom: 1vmin;
+	right: 2vmin;
+	background: url(../sprites/battle/text_arrow.png);
+	width: 27px;
+	height: 15px;
+}
+
+#MainMenu {
+	height: 100%;
+	display: block;
+	width: 60%;
+	padding: .5em;
+}
+
+#MainMenu div, #FightMenu div {
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	height: 50%;
+	vertical-align: middle;
+	position: relative;
+}
+
+#MainMenu div:hover, #FightMenu div:hover {
+	color: white;
+	background: crimson;
+	cursor: pointer;
+	border: outset crimson;
+	border-radius: 10px;
+}
+
+#MainMenu div span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+}
+
+#MainMenu #back {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	text-align: center;
+	vertical-align: middle;
+	width: 10%;
+	height: 3em;
+	line-height: 3em;
+	font-size: .8em;	
+}
+
+
+.Details {
+	position: relative;
+	bottom: 0;
+	right: 0;
+	display: inline-block;
+	width: calc(90% - 170px);
+	background: rgba(0,0,0,.7);
+	color: #fff;
+	padding: 1em;
+	border-radius: 20px 0 20px 0;
+}
+
+.Nickname {
+	padding-bottom: .5em;
+}
+
+.Details .HP, .Details .EXP {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	display: block;
+	height: 2em;
+	line-height: 1.6em;
+
+}
+
+.Details .HP::before, .Details .EXP::before {
+	content: '';
+	width: 100%;
+	display: block;
+	height: 1.5em;
+	background: rgba(255,255,255,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-radius: 0 0 15px 0;
+}
+
+.Details .HP .bar, .Details .EXP .bar {
+	content: '';
+	width: 100%;
+	display: block;
+	height: 1.5em;
+	line-height: 1.6em;
+	background-color: rgba(124,164,41,1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-radius: 0 0 15px 0;
+}
+
+.Details > div > div:first-child {
+	position: absolute;
+	top: 0;
+	left: 5%;
+}
+
+.Details > div > div:last-child {
+	position: absolute;
+	top: 0;
+	right: 5%;
+}
+
+.Details .EXP {
+	height: 1em;
+	line-height: 1.2em;
+}
+
+.Details .EXP::before {
+	height: 1em;
+}
+
+.Details .EXP .bar {
+	height: 1em;
+	background: rgba(63,126,143,1);
+	width: 41%;
+}
+
+.Details .EXP > div:first-child {
+	font-size: .7em;
+}
+
+.Details .Gender {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	font-size: 1.25em;
+	font-weight: bold;
+	font-family: arial;
+	color: pink;
+}
+
+.Details .Gender.Male {
+	color: blue;
+}
+
+.Enemy .Lvl {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	display: block;
+	font-size: .7em;
+	padding-left: 5%;
+	line-height: 1.2em;
+	margin-bottom: -.5em
+}
+
+
+
+/***** TEAM LAYOUT *****/
+
+/*#PokemonTeam {
+	display: block;
+	max-width: 200px;
+	max-height: 95vh;
+	width: 100%;
+	position: absolute;
+	top: 1vh;
+	left: 1vw;
+}*/
+#PokemonTeam {
+	display: inline-flex;
+	width: 100%;
+	position: absolute;
+	padding: 1vh;
+	text-align: justify;
+}
+
+#PokemonTeam .Poke, #PokemonTeam .blank {
+	color: #fff;
+	width: 100%;
+	white-space: nowrap;
+	background-color: rgba(0,0,0,.7);
+	border-radius: 10px 0 10px 0;
+	position: relative;
+	padding: 1em;
+	font-size: .7em;
+	height: 56px;
+	max-height: 15vh;
+	overflow: hidden;
+	margin-right: 1em;
+	max-width: calc(100%/6.2);
+	cursor: pointer;
+}
+
+#PokemonTeam .blank {
+	background: rgba(255,255,255,.3);
+}
+
+#PokemonTeam .Poke:hover {
+	background-color: rgba(90,90,90,.7);
+}
+
+#PokemonTeam .Poke:last-child {
+	margin: 0;
+}
+
+/*#PokemonTeam .Poke .img {
+	position: relative;
+	text-align: center;
+	width: 20%;
+	height: 4.25em;
+	padding-right: 4%;
+	float: left;
+}*/
+
+#PokemonTeam .Poke .img {
+	position: absolute;
+	text-align: center;
+	width: 20%;
+	height: 90%;
+	vertical-align: middle;
+	top: 50%;
+	transform: translateY(-50%);	
+}
+
+
+#PokemonTeam .Poke img {
+	max-height: 100%;
+	max-width: 100%;
+	display: block;
+	top: 50%;
+	transform: translateY(-50%);
+	position: relative;
+}
+
+#PokemonTeam .Poke .Nickname {
+	padding-left: 20%;
+	line-height: 1em;
+	padding-bottom: .5em;
+}
+
+#PokemonTeam .Poke .HP, #PokemonTeam .Poke .EXP, #PokemonTeam .Poke .Lvl {
+	margin-left: 20%;
+	position: relative;
+	z-index: 2;
+	height: 1em;
+	line-height: 1em;
+	text-align: center;
+	margin-bottom: .5em;
+}
+
+#PokemonTeam .Poke .Lvl {
+	display: block;
+	text-align: center;
+}
+
+#PokemonTeam .Poke .Lvl span {
+	position: absolute;
+	font-size: 1.3em;
+	right: 0;
+	bottom: 2px;
+}
+
+#PokemonTeam .Poke .Lvl span.male {
+	color: aqua;
+}
+
+#PokemonTeam .Poke .Lvl span.female {
+	color: orchid;
+}
+
+#PokemonTeam .Poke .EXP {
+	display: inline-block;
+	/*margin: 0;*/
+	width: 80%;
+}
+
+#PokemonTeam .Poke .HP::before, #PokemonTeam .Poke .EXP::before {
+	content: '';
+	width: 100%;
+	height: 1em;
+	display: block;
+	background: rgba(255,255,255,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-radius: 0 0 15px 0;
+}
+
+#PokemonTeam .Poke .HP .bar, #PokemonTeam .Poke .EXP .bar {
+	content: '';
+	width: 100%;
+	display: block;
+	height: 1em;
+	line-height: 1em;
+	background-color: rgba(124,164,41,1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-radius: 0 0 15px 0;
+}
+
+#PokemonTeam .Poke .EXP .bar {
+	background: rgba(63,126,143,1);
+}
+
+
+
+/***** Menu SwapOut *****/
+#MainMenu.Team {
+	width: 85%;
+}
+
+#MainMenu .swapOut {
+	width: 30%;
+	display: inline-flex;
+}
+
+#MainMenu .swapOut:hover {
+	color: white;
+	background: crimson;
+	cursor: pointer;
+	border: outset crimson 5px;
+	border-radius: 10px;
+	padding: 0;
+}
+
+#MainMenu .swapOut:hover img{
+	left: calc(5% - 5px);
+}
+
+#MainMenu .swapOut div {
+	float: left;
+}
+
+#MainMenu .swapOut div::after {
+	content: '';
+	width: 100%;
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+#MainMenu .swapOut span {
+	display: block;
+	left: 0;
+	top: 0;
+	transform: none;
+	position: relative;
+}
+
+#MainMenu .swapOut img {
+	display: inline-block;
+	max-width: 30px;
+	vertical-align: middle;
+	position: absolute;
+	left: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 3vmax;
+}
+
+#MainMenu .swapOut p {
+	padding: 0;
+	margin: 0;
+	font-size: 1vmin;
+	line-height: 1.2vmin;
+	display: inline-block;
+	width: 80%;
+	left: 10%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#MainMenu .swapOut.fainted img {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+, IE10 */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+	-webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+#MainMenu .swapOut.fainted:hover {
+	background: gray;
+	border: outset gray 5px;
+}
+
+
+
+
+/*****	MOVE SELECTOR *****/
+#MoveSelector {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	transform: translate(-50%, -50%);
+	padding: 2em;
+	color: #fff;
+	border-radius: 20% 5%;
+	background: rgba(0,0,0,.75);
+	z-index: 999;
+	padding-bottom: 5em;
+}
+
+.List {
+	width: 40%;
+	display: block;
+	height: 100%;
+	float: right;
+}
+
+.Move {
+	display: block;
+	background-image: url('../sprites/button_bg.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: contain;
+	border-radius: 0 15px 15px 0;
+	text-align: center;
+	height: 3em;
+	line-height: 3em;
+	margin-bottom: .5em;
+	color: #fff;
+	border: outset 2px;
+	font-size: .8em;
+}
+
+.Move:last-child {
+	margin: 0;
+}
+
+.Move:hover {
+	/*background-color: rgba(0,0,0,.6);*/
+	cursor: pointer;
+	border: inset 2px;
+	/*line-height: calc(3em - 2px);*/
+}
+
+div.Move.active {
+	border: inset;
+	/*background: rgba(0,0,0,.6);*/
+}
+
+.Normal 	{background: linear-gradient(rgba(255,255,255,.7), #A8A77A, rgba(0,0,0,.9));}
+.Fire 		{background: linear-gradient(rgba(255,255,255,.7), #EE8130, rgba(0,0,0,.9));}
+.Water 	{background: linear-gradient(rgba(255,255,255,.7), #6390F0, rgba(0,0,0,.9));}
+.Electric 	{background: linear-gradient(rgba(255,255,255,.7), #F7D02C, rgba(0,0,0,.9));}
+.Grass 	{background: linear-gradient(rgba(255,255,255,.7), #7AC74C, rgba(0,0,0,.9));}
+.Ice 		{background: linear-gradient(rgba(255,255,255,.7), #96D9D6, rgba(0,0,0,.9));}
+.Fighting 	{background: linear-gradient(rgba(255,255,255,.7), #C22E28, rgba(0,0,0,.9));}
+.Poison 	{background: linear-gradient(rgba(255,255,255,.7), #A33EA1, rgba(0,0,0,.9));}
+.Ground 	{background: linear-gradient(rgba(255,255,255,.7), #E2BF65, rgba(0,0,0,.9));}
+.Flying 	{background: linear-gradient(rgba(255,255,255,.7), #A98FF3, rgba(0,0,0,.9));}
+.Psychic 	{background: linear-gradient(rgba(255,255,255,.7), #F95587, rgba(0,0,0,.9));}
+.Bug 		{background: linear-gradient(rgba(255,255,255,.7), #A6B91A, rgba(0,0,0,.9));}
+.Rock 		{background: linear-gradient(rgba(255,255,255,.7), #B6A136, rgba(0,0,0,.9));}
+.Ghost 	{background: linear-gradient(rgba(255,255,255,.7), #735797, rgba(0,0,0,.9));}
+.Dragon 	{background: linear-gradient(rgba(255,255,255,.7), #6F35FC, rgba(0,0,0,.9));}
+.Dark 		{background: linear-gradient(rgba(255,255,255,.7), #705746, rgba(0,0,0,.9));}
+.Steel 	{background: linear-gradient(rgba(255,255,255,.7), #B7B7CE, rgba(0,0,0,.9));}
+.Fairy 	{background: linear-gradient(rgba(255,255,255,.7), #D685AD, rgba(0,0,0,.9));}
+
+.Type.Normal, .Normal.active 		{background: #A8A77A;}
+.Type.Fire, .Fire.active 			{background: #EE8130;}
+.Type.Water, .Water.active 			{background: #6390F0;}
+.Type.Electric, .Electric.active 	{background: #F7D02C;}
+.Type.Grass, .Grass.active 			{background: #7AC74C;}
+.Type.Ice, .Ice.active 				{background: #96D9D6;}
+.Type.Fighting, .Fighting.active 	{background: #C22E28;}
+.Type.Poison, .Poison.active 		{background: #A33EA1;}
+.Type.Ground, .Ground.active 		{background: #E2BF65;}
+.Type.Flying, .Flying.active 		{background: #A98FF3;}
+.Type.Psychic, .Psychic.active 		{background: #F95587;}
+.Type.Bug, .Bug.active 				{background: #A6B91A;}
+.Type.Rock, .Rock.active 			{background: #B6A136;}
+.Type.Ghost, .Ghost.active 			{background: #735797;}
+.Type.Dragon, .Dragon.active 		{background: #6F35FC;}
+.Type.Dark, .Dark.active 			{background: #705746;}
+.Type.Steel, .Steel.active 			{background: #B7B7CE;}
+.Type.Fairy, .Fairy.active		 	{background: #D685AD;}
+
+
+.Desc {
+	float: left;
+	display: block;
+	width: calc(60% - .5em);
+	height: 21em;
+	background: radial-gradient(ellipse at bottom, #fff 0%, #cfcfcf 100%);
+	border: 3px outset crimson;
+	border-radius: 15px 0 0 0;
+	padding: 1em;
+	line-height: 1.2em;
+	position: relative;
+	color: #000;
+}
+
+.Desc div {
+	margin-bottom: .5em;
+}
+
+.Desc .Type {
+	display: inline-block;
+	text-align: center;
+	padding: .5em;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 10px;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	width: 125px;
+}
+
+.Desc .Type img {
+	max-width: 40px;
+	margin-bottom: 1em;
+}
+
+.Desc .Category {
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+}
+
+.Desc div span {
+	display: inline-block;
+	width: 60%;
+}
+
+.Desc p {
+	font-size: .75em;
+	padding-top: 1em;
+	line-height: 1.3em;
+}
+
+.Explanation {
+	padding: 1em 0;
+	font-size: 10px;
+	width: 60%;
+	text-align: center;
+}
+
+.Forget {
+	padding: 1em;
+	border-radius: 15px;
+	font-size: .8em;
+	text-align: center;
+	color: #000;
+	background: #999;
+	background: linear-gradient(#999, #fff, #999);
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	width: 100%;
+	left: 0;
+	transform: translateY(150%);
+	cursor: pointer;
+}
+
+.Forget:hover {
+	background: linear-gradient(#666, #fff, #666);
+}
+
+.Forget:active {
+	background: linear-gradient(#fff, #666, #fff);
+}
+
+
+/***** STATS *****/
+#PokeStats {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	height: 500px;
+	display: inline-flex;
+	z-index: 999;
+	display: none;
+}
+
+#PokeStats::after {
+	content: '';
+	clear: both;
+}
+
+#PokeStats div {
+	position: relative;
+}
+
+#PokeStats::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.75);
+	border-radius: 5%;
+
+	z-index: -1;
+
+	-webkit-transform: skew(-5deg, -2deg);
+	-moz-transform: skew(-5deg, -2deg);
+	-ms-transform: skew(-5deg, -2deg);
+	-o-transform: skew(-5deg, -2deg);
+	transform: skew(-5deg, -2deg);
+	-webkit-backface-visibility: hidden;
+}
+
+#PokeStats .Pokeball {
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 52px;
+	/*background: url(../sprites/icons/pokeball_open.png) center center no-repeat;*/
+	background-size: contain;
+	left: 15px;
+	top: -15px;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#PokeStats .Pokeball img {
+	height: 100%;
+	width: 100%;
+	display: block;
+	z-index: 3;
+	position: absolute;
+}
+
+#PokeStats .Left, .Right {
+	float: left;
+	width: 200px;
+	height: 100%;
+}
+
+#PokeStats .Left {
+	width: 300px;
+}
+
+#PokeStats .Left .Poke {
+	width: 100%;
+	height: 30%;
+}
+
+#PokeStats .Left .Poke .ShadowBox {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#PokeStats .Left .Nickname {
+	color: #fff;
+	text-align: center;
+	line-height: 1.5em;
+	font-size: .8em;
+	position: relative;
+	width: 80%;
+	left: 10%;
+}
+
+#PokeStats .Left .Nickname::before {
+	content: '';
+
+	display: block;
+	height: 3em;
+	margin-bottom: -2.3em;
+
+	background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+	border-bottom: 2px outset #aaa;
+	border-right: 3px outset #aaa;
+	border-radius: 5%;
+
+	position: relative;
+	z-index: -1;
+
+	-webkit-transform: skew(-20deg, -3deg);
+	-moz-transform: skew(-20deg, -3deg);
+	-ms-transform: skew(-20deg, -3deg);
+	-o-transform: skew(-20deg, -3deg);
+	transform: skew(-20deg, -3deg);
+}
+
+#PokeStats .Left .Name::before {
+	margin-top: 1em;
+}
+
+
+#PokeStats .Right {
+	padding-top: 2em;
+}
+
+#PokeStats .Right .Label {
+	display: inline-block;
+	text-align: center;
+	width: 35%;
+	/*font-size: .6em;*/
+	color: #fff;
+	white-space: nowrap;
+	line-height: 1.2em;
+	margin: .5em 0;
+	position: relative;
+	padding: .25em;
+	font-family: Helvetica, Arial;
+	font-variant: small-caps;
+	border-radius: 10px 0;
+}
+
+#PokeStats .Right .Value {
+	text-align: right;
+	color: #fff;
+	font-family: arial;
+	display: inline-block;
+	width: 40%;
+	vertical-align: middle;
+}
+
+#PokeStats .Right .Value img {
+	height: 2em;
+	vertical-align: middle;
+}
+
+#PokeStats .Right .Value b {
+	font-weight: normal;
+	color: #ccc000;
+}
+
+#PokeStats .Right .Value i {
+	font-style: normal;
+	color: #00cc00;
+}
+
+#PokeStats .Right .Legend {
+	font-size: .7em;
+	padding: .25em;
+	border-radius: 10px 0 25px 10px;
+	margin-bottom: .5em;
+	text-indent: 10%;
+	line-height: 1.5em;
+	width: 87%;
+	position: relative;
+	left: -2.5%;
+}
+
+.Legend.IV {
+	background-color: #ccc000;
+}
+
+.Legend.EV {
+	background-color: #00cc00;
+}
+
+#PokeStats .Left .MoveSet {
+	margin-top: 3em;
+}
+
+#PokeStats .Left .Move {
+	width: 80%;
+	display: block;
+	margin: .5em auto;
+	border-radius: 15px;
+	text-align: left;
+	text-indent: 10%;
+}
+
+#PokeStats .blank {
+	width: 80%;
+	display: block;
+	margin: .5em auto;
+	height: 2em;
+	border-radius: 15px;
+	text-align: left;
+	text-indent: 10%;
+	background: rgba(255,255,255,.3);
+}
+
+#PokeStats .Left .Move img {
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#PokeStats .Left .Move .Desc {
+	width: 100%;
+	position: absolute;
+	display: none;
+	z-index: 30;
+	border-top: 0;
+	margin-top: -3px;
+	border: 2px outset;
+	border-radius: 15px;
+	height: auto;
+	font-size: 12px;
+	text-indent: 0;
+	text-align: justify;
+}
+
+
+/***** EVOLUTION *****/
+
+#Evolution {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	height: 300px;
+	width: 300px;
+	display: none;
+}
+
+#Evolution .hiddenBG {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 0;
+	width: 0;
+	border-radius: 50%;
+	z-index: -1;
+	transition: 2s ease;
+	-webkit-backface-visibility: hidden;
+}
+
+#Evolution .hiddenBG.Normal 	{background: radial-gradient(ellipse at center, #fff 30%, #A8A77A 100%);}
+#Evolution .hiddenBG.Fire 		{background: radial-gradient(ellipse at center, #fff 30%, #EE8130 100%);}
+#Evolution .hiddenBG.Water 		{background: radial-gradient(ellipse at center, #fff 30%, #6390F0 100%);}
+#Evolution .hiddenBG.Electric 	{background: radial-gradient(ellipse at center, #fff 30%, #F7D02C 100%);}
+#Evolution .hiddenBG.Grass 		{background: radial-gradient(ellipse at center, #fff 30%, #7AC74C 100%);}
+#Evolution .hiddenBG.Ice 		{background: radial-gradient(ellipse at center, #fff 30%, #96D9D6 100%);}
+#Evolution .hiddenBG.Fighting 	{background: radial-gradient(ellipse at center, #fff 30%, #C22E28 100%);}
+#Evolution .hiddenBG.Poison 	{background: radial-gradient(ellipse at center, #fff 30%, #A33EA1 100%);}
+#Evolution .hiddenBG.Ground 	{background: radial-gradient(ellipse at center, #fff 30%, #E2BF65 100%);}
+#Evolution .hiddenBG.Flying 	{background: radial-gradient(ellipse at center, #fff 30%, #A98FF3 100%);}
+#Evolution .hiddenBG.Psychic 	{background: radial-gradient(ellipse at center, #fff 30%, #F95587 100%);}
+#Evolution .hiddenBG.Bug 		{background: radial-gradient(ellipse at center, #fff 30%, #A6B91A 100%);}
+#Evolution .hiddenBG.Rock 		{background: radial-gradient(ellipse at center, #fff 30%, #B6A136 100%);}
+#Evolution .hiddenBG.Ghost 		{background: radial-gradient(ellipse at center, #fff 30%, #735797 100%);}
+#Evolution .hiddenBG.Dragon 	{background: radial-gradient(ellipse at center, #fff 30%, #6F35FC 100%);}
+#Evolution .hiddenBG.Dark 		{background: radial-gradient(ellipse at center, #fff 30%, #705746 100%);}
+#Evolution .hiddenBG.Steel 		{background: radial-gradient(ellipse at center, #fff 30%, #B7B7CE 100%);}
+#Evolution .hiddenBG.Fairy 		{background: radial-gradient(ellipse at center, #fff 30%, #D685AD 100%);}
+
+#Evolution .hiddenBG.transform {
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	transition: 3s ease;
+	-webkit-backface-visibility: hidden;
+}
+
+#Evolution .Poke img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	filter: none;
+	transition: 1.5s ease;
+	-webkit-backface-visibility: hidden;
+}
+
+#Evolution .Poke img.transform {
+	filter: brightness(10); /* Firefox 3.5+, IE10 */
+	transition: 4s ease;
+	-webkit-backface-visibility: hidden;
+}
