@@ -40,11 +40,11 @@ var checkEncounter = function(){
 
 				$.ajax({
 					type: "POST",
-					dataType: "json",
+					// dataType: "json",
 					url: "./functions/php/wild_encounter.php",
 					data: {playerID: 1, route: route},
 				}).done(function(msg) {
-					// console.log(msg);
+					console.log(msg);
 					combat.start(msg);
 				});
 			}

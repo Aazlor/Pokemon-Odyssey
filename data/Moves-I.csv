@@ -1,0 +1,165 @@
+﻿Absorb,GRASS,Special,20,100,25,User recovers half the HP inflicted on opponent.,A nutrient-draining attack. The user’s HP is restored by half the damage taken by the target.
+Acid,POISON,Special,40,100,30,May lower opponent's Special Defense.,The opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stat.
+Acid Armor,POISON,Status,—,—,20,Sharply raises user's Defense.,"The user alters its cellular structure to liquefy itself, sharply raising its Defense stat."
+Agility,PSYCHIC,Status,—,—,30,Sharply raises user's Speed.,The user relaxes and lightens its body to move faster. This sharply raises the Speed stat.
+Amnesia,PSYCHIC,Status,—,—,20,Sharply raises user's Special Defense.,The user temporarily empties its mind to forget its concerns. This sharply raises the user’s Sp. Def stat.
+Aurora Beam,ICE,Special,65,100,20,May lower opponent's Attack.,The target is hit with a rainbow-colored beam. This may also lower the target’s Attack stat.
+Barrage,NORMAL,Physical,15,85,20,Hits 2-5 times in one turn.,Round objects are hurled at the target to strike two to five times in a row.
+Barrier,PSYCHIC,Status,—,—,20,Sharply raises user's Defense.,The user throws up a sturdy wall that sharply raises its Defense stat.
+Bide,NORMAL,Physical,—,—,10,User takes damage for two turns then strikes back double.,"The user endures attacks for two turns, then strikes back to cause double the damage taken."
+Bind,NORMAL,Physical,15,85,20,"Traps opponent, damaging them for 4-5 turns.",Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.
+Bite,DARK,Physical,60,100,25,May cause flinching.,The target is bitten with viciously sharp fangs. This may also make the target flinch.
+Blizzard,ICE,Special,110,70,5,May freeze opponent.,A howling blizzard is summoned to strike opposing Pokémon. This may also leave the opposing Pokémon frozen.
+Body Slam,NORMAL,Physical,85,100,15,May paralyze opponent.,The user drops onto the target with its full body weight. This may also leave the target with paralysis.
+Bone Club,GROUND,Physical,65,85,20,May cause flinching.,The user clubs the target with a bone. This may also make the target flinch.
+Bonemerang,GROUND,Physical,50,90,10,Hits twice in one turn.,The user throws the bone it holds. The bone loops around to hit the target twice—coming and going.
+Bubble,WATER,Special,40,100,30,May lower opponent's Speed.,A spray of countless bubbles is jetted at the opposing Pokémon. This may also lower their Speed stat.
+Bubble Beam,WATER,Special,65,100,20,May lower opponent's Speed.,A spray of bubbles is forcefully ejected at the target. This may also lower its Speed stat.
+Clamp,WATER,Physical,35,85,10,"Traps opponent, damaging them for 4-5 turns.",The target is clamped and squeezed by the user’s very thick and sturdy shell for four to five turns.
+Comet Punch,NORMAL,Physical,18,85,15,Hits 2-5 times in one turn.,The target is hit with a flurry of punches that strike two to five times in a row.
+Confuse Ray,GHOST,Status,—,100,10,Confuses opponent.,The target is exposed to a sinister ray that triggers confusion.
+Confusion,PSYCHIC,Special,50,100,25,May confuse opponent.,The target is hit by a weak telekinetic force. This may also confuse the target.
+Constrict,NORMAL,Physical,10,100,35,May lower opponent's Speed by one stage.,"The target is attacked with long, creeping tentacles, vines, or the like. This may also lower the target’s Speed stat."
+Conversion,NORMAL,Status,—,—,30,Changes user's type to that of its first move.,The user changes its type to become the same type as the move at the top of the list of moves it knows.
+Counter,FIGHTING,Physical,—,100,20,"When hit by a Physical Attack, user strikes back with 2x power.","A retaliation move that counters any physical attack, inflicting double the damage taken."
+Crabhammer,WATER,Physical,100,90,10,High critical hit ratio.,The target is hammered with a large pincer. Critical hits land more easily.
+Cut,NORMAL,Physical,50,95,30,,The target is cut with a scythe or claw.
+Defense Curl,NORMAL,Status,—,—,40,Raises user's Defense.,The user curls up to conceal weak spots and raise its Defense stat.
+Dig,GROUND,Physical,80,100,10,"Digs underground on first turn, attacks on second. Can also escape from caves.","The user burrows, then attacks on the next turn."
+Disable,NORMAL,Status,—,100,20,Opponent can't use its last attack for a few turns.,"For four turns, this move prevents the target from using the move it last used."
+Dizzy Punch,NORMAL,Physical,70,100,10,May confuse opponent.,The target is hit with rhythmically launched punches. This may also leave the target confused.
+Double Kick,FIGHTING,Physical,30,100,30,Hits twice in one turn.,The target is quickly kicked twice in succession using both feet.
+Double Slap,NORMAL,Physical,15,85,10,Hits 2-5 times in one turn.,"The target is slapped repeatedly, back and forth, two to five times in a row."
+Double Team,NORMAL,Status,—,—,15,Raises user's Evasiveness.,"By moving rapidly, the user makes illusory copies of itself to raise its evasiveness."
+Double-Edge,NORMAL,Physical,120,100,15,User receives recoil damage.,"A reckless, life-risking tackle. This also damages the user quite a lot."
+Dragon Rage,DRAGON,Special,—,100,10,Always inflicts 40 HP.,This attack hits the target with a shock wave of pure rage. This attack always inflicts 40 HP damage.
+Dream Eater,PSYCHIC,Special,100,100,15,User recovers half the HP inflicted on a sleeping opponent.,The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal its own HP.
+Drill Peck,FLYING,Physical,80,100,20,,A corkscrewing attack with a sharp beak acting as a drill.
+Earthquake,GROUND,Physical,100,100,10,Power is doubled if opponent is underground from using Dig.,The user sets off an earthquake that strikes every Pokémon around it.
+Egg Bomb,NORMAL,Physical,100,75,10,,A large egg is hurled at the target with maximum force to inflict damage.
+Ember,FIRE,Special,40,100,25,May burn opponent.,The target is attacked with small flames. This may also leave the target with a burn.
+Explosion,NORMAL,Physical,250,100,5,User faints.,The user attacks everything around it by causing a tremendous explosion. The user faints upon using this move.
+Fire Blast,FIRE,Special,110,85,5,May burn opponent.,The target is attacked with an intense blast of all-consuming fire. This may also leave the target with a burn.
+Fire Punch,FIRE,Physical,75,100,15,May burn opponent.,The target is punched with a fiery fist. This may also leave the target with a burn.
+Fire Spin,FIRE,Special,35,85,15,"Traps opponent, damaging them for 4-5 turns.",The target becomes trapped within a fierce vortex of fire that rages for four to five turns.
+Fissure,GROUND,Physical,—,—,5,"One-Hit-KO, if it hits.",The user opens up a fissure in the ground and drops the target in. The target faints instantly if this attack hits.
+Flamethrower,FIRE,Special,90,100,15,May burn opponent.,The target is scorched with an intense blast of fire. This may also leave the target with a burn.
+Flash,NORMAL,Status,—,100,20,Lowers opponent's Accuracy.,The user flashes a bright light that cuts the target’s accuracy.
+Fly,FLYING,Physical,90,95,15,"Flies up on first turn, attacks on second turn.",The user soars and then strikes its target on the next turn.
+Focus Energy,NORMAL,Status,—,—,30,Increases critical hit ratio.,The user takes a deep breath and focuses so that critical hits land more easily.
+Fury Attack,NORMAL,Physical,15,85,20,Hits 2-5 times in one turn.,The target is jabbed repeatedly with a horn or beak two to five times in a row.
+Fury Swipes,NORMAL,Physical,18,80,15,Hits 2-5 times in one turn.,The target is raked with sharp claws or scythes quickly two to five times in a row.
+Glare,NORMAL,Status,—,100,30,Paralyzes opponent.,The user intimidates the target with the pattern on its belly to cause paralysis.
+Growl,NORMAL,Status,—,100,40,Lowers opponent's Attack.,"The user growls in an endearing way, making opposing Pokémon less wary. This lowers their Attack stat."
+Growth,NORMAL,Status,—,—,40,Raises user's Attack and Special Attack.,"The user’s body grows all at once, raising the Attack and Sp. Atk stats."
+Guillotine,NORMAL,Physical,—,—,5,"One-Hit-KO, if it hits.","A vicious, tearing attack with big pincers. The target faints instantly if this attack hits."
+Gust,FLYING,Special,40,100,35,Hits Pokémon using Fly/Bounce with double power.,A gust of wind is whipped up by wings and launched at the target to inflict damage.
+Harden,NORMAL,Status,—,—,30,Raises user's Defense.,The user stiffens all the muscles in its body to raise its Defense stat.
+Haze,ICE,Status,—,—,30,Resets all stat changes.,The user creates a haze that eliminates every stat change among all the Pokémon engaged in battle.
+Headbutt,NORMAL,Physical,70,100,15,May cause flinching.,The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.
+High Jump Kick,FIGHTING,Physical,130,90,10,"If it misses, the user loses half their HP.","The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead."
+Horn Attack,NORMAL,Physical,65,100,25,,The target is jabbed with a sharply pointed horn to inflict damage.
+Horn Drill,NORMAL,Physical,—,—,5,"One-Hit-KO, if it hits.",The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.
+Hydro Pump,WATER,Special,110,80,5,,The target is blasted by a huge volume of water launched under great pressure.
+Hyper Beam,NORMAL,Special,150,90,5,User must recharge next turn.,The target is attacked with a powerful beam. The user can’t move on the next turn.
+Hyper Fang,NORMAL,Physical,80,90,15,May cause flinching.,The user bites hard on the target with its sharp front fangs. This may also make the target flinch.
+Hypnosis,PSYCHIC,Status,—,60,20,Puts opponent to sleep.,The user employs hypnotic suggestion to make the target fall into a deep sleep.
+Ice Beam,ICE,Special,90,100,10,May freeze opponent.,The target is struck with an icy-cold beam of energy. This may also leave the target frozen.
+Ice Punch,ICE,Physical,75,100,15,May freeze opponent.,The target is punched with an icy fist. This may also leave the target frozen.
+Jump Kick,FIGHTING,Physical,100,95,10,"If it misses, the user loses half their HP.","The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself."
+Karate Chop,FIGHTING,Physical,50,100,25,High critical hit ratio.,The target is attacked with a sharp chop. Critical hits land more easily.
+Kinesis,PSYCHIC,Status,—,80,15,Lowers opponent's Accuracy.,The user distracts the target by bending a spoon. This lowers the target’s accuracy.
+Leech Life,BUG,Physical,20,100,15,User recovers half the HP inflicted on opponent.,The user drains the target’s blood. The user’s HP is restored by half the damage taken by the target.
+Leech Seed,GRASS,Status,—,90,10,User steals HP from opponent each turn.,A seed is planted on the target. It steals some HP from the target every turn.
+Leer,NORMAL,Status,—,100,30,Lowers opponent's Defense.,The user gives opposing Pokémon an intimidating leer that lowers the Defense stat.
+Lick,GHOST,Physical,30,100,30,May paralyze opponent.,"The target is licked with a long tongue, causing damage. This may also leave the target with paralysis."
+Light Screen,PSYCHIC,Status,—,—,30,Halves damage from Special attacks for 5 turns.,A wondrous wall of light is put up to reduce damage from special attacks for five turns.
+Lovely Kiss,NORMAL,Status,—,75,10,Puts opponent to sleep.,"With a scary face, the user tries to force a kiss on the target. If it succeeds, the target falls asleep."
+Low Kick,FIGHTING,Physical,—,100,20,"The heavier the opponent, the stronger the attack.","A powerful low kick that makes the target fall over. The heavier the target, the greater the move’s power."
+Meditate,PSYCHIC,Status,—,—,40,Raises user's Attack.,The user meditates to awaken the power deep within its body and raise its Attack stat.
+Mega Drain,GRASS,Special,40,100,15,User recovers half the HP inflicted on opponent.,A nutrient-draining attack. The user’s HP is restored by half the damage taken by the target.
+Mega Kick,NORMAL,Physical,120,75,5,,The target is attacked by a kick launched with muscle-packed power.
+Mega Punch,NORMAL,Physical,80,85,20,,The target is slugged by a punch thrown with muscle-packed power.
+Metronome,NORMAL,Status,—,—,10,User performs any move in the game at random.,The user waggles a finger and stimulates its brain into randomly using nearly any move.
+Mimic,NORMAL,Status,—,—,10,Copies the opponent's last move.,The user copies the target’s last move. The move can be used during battle until the Pokémon is switched out.
+Minimize,NORMAL,Status,—,—,10,Sharply raises user's Evasiveness.,"The user compresses its body to make itself look smaller, which sharply raises its evasiveness."
+Mirror Move,FLYING,Status,—,—,20,User performs the opponent's last move.,The user counters the target by mimicking the target’s last move.
+Mist,ICE,Status,—,—,30,User's stats cannot be changed for a period of time.,The user cloaks itself and its allies in a white mist that prevents any of their stats from being lowered for five turns.
+Night Shade,GHOST,Special,—,100,15,Inflicts damage equal to user's level.,The user makes the target see a frightening mirage. It inflicts damage equal to the user’s level.
+Pay Day,NORMAL,Physical,40,100,20,A small amount of money is gained after the battle resolves.,Numerous coins are hurled at the target to inflict damage. Money is earned after the battle.
+Peck,FLYING,Physical,35,100,35,,The target is jabbed with a sharply pointed beak or horn.
+Petal Dance,GRASS,Special,120,100,10,User attacks for 2-3 turns but then becomes confused.,The user attacks the target by scattering petals for two to three turns. The user then becomes confused.
+Pin Missile,BUG,Physical,25,95,20,Hits 2-5 times in one turn.,Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+Poison Gas,POISON,Status,—,90,40,Poisons opponent.,"A cloud of poison gas is sprayed in the face of opposing Pokémon, poisoning those hit."
+Poison Powder,POISON,Status,—,75,35,Poisons opponent.,The user scatters a cloud of poisonous dust that poisons the target.
+Poison Sting,POISON,Physical,15,100,35,May poison the opponent.,The user stabs the target with a poisonous stinger. This may also poison the target.
+Pound,NORMAL,Physical,40,100,35,,"The target is physically pounded with a long tail, a foreleg, or the like."
+Psybeam,PSYCHIC,Special,65,100,20,May confuse opponent.,The target is attacked with a peculiar ray. This may also leave the target confused.
+Psychic,PSYCHIC,Special,90,100,10,May lower opponent's Special Defense.,The target is hit by a strong telekinetic force. This may also lower the target’s Sp. Def stat.
+Psywave,PSYCHIC,Special,—,80,15,Inflicts damage 50-150% of user's level.,The target is attacked with an odd psychic wave. The attack varies in intensity.
+Quick Attack,NORMAL,Physical,40,100,30,User attacks first.,The user lunges at the target at a speed that makes it almost invisible. This move always goes first.
+Rage,NORMAL,Physical,20,100,20,Raises user's Attack when hit.,"As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle."
+Razor Leaf,GRASS,Physical,55,95,25,High critical hit ratio.,Sharp-edged leaves are launched to slash at the opposing Pokémon. Critical hits land more easily.
+Razor Wind,NORMAL,Special,80,100,10,"Charges on first turn, attacks on second. High critical hit ratio.","In this two-turn attack, blades of wind hit opposing Pokémon on the second turn. Critical hits land more easily."
+Recover,NORMAL,Status,—,—,10,User recovers half its max HP.,"Restoring its own cells, the user restores its own HP by half of its max HP."
+Reflect,PSYCHIC,Status,—,—,20,Halves damage from Physical attacks for 5 turns.,A wondrous wall of light is put up to reduce damage from physical attacks for five turns.
+Rest,PSYCHIC,Status,—,—,10,"User sleeps for 2 turns, but user is fully healed.",The user goes to sleep for two turns. This fully restores the user’s HP and heals any status conditions.
+Roar,NORMAL,Status,—,—,20,"In battles, the opponent switches. In the wild, the Pokémon runs.","The target is scared off, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon."
+Rock Slide,ROCK,Physical,75,90,10,May cause flinching.,Large boulders are hurled at the opposing Pokémon to inflict damage. This may also make the opposing Pokémon flinch.
+Rock Throw,ROCK,Physical,50,90,15,,The user picks up and throws a small rock at the target to attack.
+Rolling Kick,FIGHTING,Physical,60,85,15,May cause flinching.,"The user lashes out with a quick, spinning kick. This may also make the target flinch."
+Sand Attack,GROUND,Status,—,100,15,Lowers opponent's Accuracy.,"Sand is hurled in the target’s face, reducing the target’s accuracy."
+Scratch,NORMAL,Physical,40,100,35,,"Hard, pointed, sharp claws rake the target to inflict damage."
+Screech,NORMAL,Status,—,85,40,Sharply lowers opponent's Defense.,An earsplitting screech harshly lowers the target’s Defense stat.
+Seismic Toss,FIGHTING,Physical,—,100,20,Inflicts damage equal to user's level.,The target is thrown using the power of gravity. It inflicts damage equal to the user’s level.
+Self-Destruct,NORMAL,Physical,200,100,5,User faints.,The user attacks everything around it by causing an explosion. The user faints upon using this move.
+Sharpen,NORMAL,Status,—,—,30,Raises user's Attack.,"The user makes its edges more jagged, which raises its Attack stat."
+Sing,NORMAL,Status,—,55,15,Puts opponent to sleep.,A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.
+Skull Bash,NORMAL,Physical,130,100,10,"Raises Defense on first turn, attacks on second.","The user tucks in its head to raise its Defense stat on the first turn, then rams the target on the next turn."
+Sky Attack,FLYING,Physical,140,90,5,"Charges on first turn, attacks on second. May cause flinching.",A second-turn attack move where critical hits land more easily. This may also make the target flinch.
+Slam,NORMAL,Physical,80,75,20,,"The target is slammed with a long tail, vines, or the like to inflict damage."
+Slash,NORMAL,Physical,70,100,20,High critical hit ratio.,The target is attacked with a slash of claws or blades. Critical hits land more easily.
+Sleep Powder,GRASS,Status,—,75,15,Puts opponent to sleep.,The user scatters a big cloud of sleep-inducing dust around the target.
+Sludge,POISON,Special,65,100,20,May poison opponent.,Unsanitary sludge is hurled at the target. This may also poison the target.
+Smog,POISON,Special,30,70,20,May poison opponent.,The target is attacked with a discharge of filthy gases. This may also poison the target.
+Smokescreen,NORMAL,Status,—,100,20,Lowers opponent's Accuracy.,The user releases an obscuring cloud of smoke or ink. This lowers the target’s accuracy.
+Soft-Boiled,NORMAL,Status,—,—,10,User recovers half its max HP.,The user restores its own HP by up to half of its max HP.
+Solar Beam,GRASS,Special,120,100,10,"Charges on first turn, attacks on second.","In this two-turn attack, the user gathers light, then blasts a bundled beam on the next turn."
+Sonic Boom,NORMAL,Special,—,90,20,Always inflicts 20 HP.,The target is hit with a destructive shock wave that always inflicts 20 HP damage.
+Spike Cannon,NORMAL,Physical,20,100,15,Hits 2-5 times in one turn.,Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+Splash,NORMAL,Status,—,—,40,Doesn't do ANYTHING.,The user just flops and splashes around to no effect at all...
+Spore,GRASS,Status,—,100,15,Puts opponent to sleep.,The user scatters bursts of spores that induce sleep.
+Stomp,NORMAL,Physical,65,100,20,May cause flinching.,The target is stomped with a big foot. This may also make the target flinch.
+Strength,NORMAL,Physical,80,100,15,,The target is slugged with a punch thrown at maximum power.
+String Shot,BUG,Status,—,95,40,Sharply lowers opponent's Speed.,The opposing Pokémon are bound with silk blown from the user’s mouth that harshly lowers the Speed stat.
+Struggle,NORMAL,Physical,50,100,—,Only usable when all PP are gone. Hurts the user.,This attack is used in desperation only if the user has no PP. It also damages the user a little.
+Stun Spore,GRASS,Status,—,75,30,Paralyzes opponent.,The user scatters a cloud of numbing powder that paralyzes the target.
+Submission,FIGHTING,Physical,80,80,25,User receives recoil damage.,The user grabs the target and recklessly dives for the ground. This also damages the user a little.
+Substitute,NORMAL,Status,—,—,10,Uses HP to creates a decoy that takes hits.,The user makes a copy of itself using some of its HP. The copy serves as the user’s decoy.
+Super Fang,NORMAL,Physical,—,90,10,Always takes off half of the opponent's HP.,The user chomps hard on the target with its sharp front fangs. This cuts the target’s HP in half.
+Supersonic,NORMAL,Status,—,55,20,Confuses opponent.,The user generates odd sound waves from its body that confuse the target.
+Surf,WATER,Special,90,100,15,Hits all adjacent Pokémon.,The user attacks everything around it by swamping its surroundings with a giant wave.
+Swift,NORMAL,Special,60,∞,20,Ignores Accuracy and Evasiveness.,Star-shaped rays are shot at the opposing Pokémon. This attack never misses.
+Swords Dance,NORMAL,Status,—,—,20,Sharply raises user's Attack.,A frenetic dance to uplift the fighting spirit. This sharply raises the user’s Attack stat.
+Tackle,NORMAL,Physical,50,100,35,,A physical attack in which the user charges and slams into the target with its whole body.
+Tail Whip,NORMAL,Status,—,100,30,Lowers opponent's Defense.,"The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stat."
+Take Down,NORMAL,Physical,90,85,20,User receives recoil damage.,"A reckless, full-body charge attack for slamming into the target. This also damages the user a little."
+Teleport,PSYCHIC,Status,—,—,20,Allows user to flee wild battles; also warps player to last PokéCenter.,Use it to flee from any wild Pokémon.
+Thrash,NORMAL,Physical,120,100,10,User attacks for 2-3 turns but then becomes confused.,The user rampages and attacks for two to three turns. The user then becomes confused.
+Thunder,ELECTRIC,Special,110,70,10,May paralyze opponent.,A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.
+Thunder Punch,ELECTRIC,Physical,75,100,15,May paralyze opponent.,The target is punched with an electrified fist. This may also leave the target with paralysis.
+Thunder Shock,ELECTRIC,Special,40,100,30,May paralyze opponent.,A jolt of electricity crashes down on the target to inflict damage. This may also leave the target with paralysis.
+Thunder Wave,ELECTRIC,Status,—,100,20,Paralyzes opponent.,The user launches a weak jolt of electricity that paralyzes the target.
+Thunderbolt,ELECTRIC,Special,90,100,15,May paralyze opponent.,A strong electric blast crashes down on the target. This may also leave the target with paralysis.
+Toxic,POISON,Status,—,90,10,Badly poisons opponent.,A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Transform,NORMAL,Status,—,—,10,User takes on the form and attacks of the opponent.,The user transforms into a copy of the target right down to having the same move set.
+Tri Attack,NORMAL,Special,80,100,10,"May paralyze, burn or freeze opponent.","The user strikes with a simultaneous three-beam attack. May also burn, freeze, or paralyze the target."
+Twineedle,BUG,Physical,25,100,20,Hits twice in one turn. May poison opponent.,The user damages the target twice in succession by jabbing it with two spikes. This may also poison the target.
+Vice Grip,NORMAL,Physical,55,100,30,,The target is gripped and squeezed from both sides to inflict damage.
+Vine Whip,GRASS,Physical,45,100,25,,"The target is struck with slender, whiplike vines to inflict damage."
+Water Gun,WATER,Special,40,100,25,,The target is blasted with a forceful shot of water.
+Waterfall,WATER,Physical,80,100,15,May cause flinching.,The user charges at the target and may make it flinch.
+Whirlwind,NORMAL,Status,—,—,20,"In battles, the opponent switches. In the wild, the Pokémon runs.","The target is blown away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon."
+Wing Attack,FLYING,Physical,60,100,35,,"The target is struck with large, imposing wings spread wide to inflict damage."
+Withdraw,WATER,Status,—,—,40,Raises user's Defense.,"The user withdraws its body into its hard shell, raising its Defense stat."
+Wrap,NORMAL,Physical,15,90,20,"Traps opponent, damaging them for 4-5 turns.","A long body, vines, or the like are used to wrap and squeeze the target for four to five turns."

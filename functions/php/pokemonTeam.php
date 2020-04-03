@@ -21,7 +21,7 @@ elseif($_POST[action] == 'viewStats'){
 	}
 	
 	$query = "SELECT * FROM moves WHERE name IN ('".implode("','", $poke[moveset])."')";
-	$get = $mysqli->query($query);
+	$get = $mysqli->query($query) or die($mysqli->error);
 	while($z = $get->fetch_assoc()){
 		$moves[$z[name]] = $z;
 	}
@@ -68,8 +68,9 @@ elseif($_POST[action] == 'viewStats'){
 				';
 				foreach ($poke[moveset] as $k => $v) {
 					$value = $moves[$v];
-					$value[accuracy] = ($value[accuracy] > 0) ? $value[accuracy] * 100 .'%' : $value[accuracy];
-					$return .= '<div class="Move '.$value[type].'" data-key="'.$key.'">'.$value[name].'<img src="./sprites/icons/'.strtolower($value[category]).'.png" alt="'.$value[category].'" title="'.$value[category].'"><div class="Desc"><div><span>Power</span> '.$value[power].'</div><div><span>Accuracy</span> '. $value[accuracy] .'</div><div><p>'.$value[flavor].'</p></div></div></div>';
+					// $value[accuracy] = ($value[accuracy] > 0) ? $value[accuracy] * 100 .'%' : $value[accuracy];
+					$value[accuracy] = ($value[accuracy] > 0) ? $value[accuracy] .'%' : $value[accuracy];
+					$return .= '<div class="Move '.$value[type].'" data-key="'.$key.'"><img src="./sprites/icons/'.strtolower($value[type]).'.png" class="type" />'.$value[name].'<img src="./sprites/icons/'.strtolower($value[category]).'.png" alt="'.$value[category].'" title="'.$value[category].'"><div class="Desc"><div><span>Power</span> '.$value[power].'</div><div><span>Accuracy</span> '. $value[accuracy] .'</div><div><p>'.$value[flavor].'</p></div></div></div>';
 				}
 				$return .= '
 			</div>

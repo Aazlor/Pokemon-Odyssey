@@ -465,6 +465,7 @@ body {
 	position: absolute;
 	padding: 1vh;
 	text-align: justify;
+	z-index: 998;
 }
 
 #PokemonTeam .Poke, #PokemonTeam .blank {
@@ -725,7 +726,7 @@ body {
 	margin: 0;
 }
 
-.Move:hover {
+.Move:hover, .Move:hover img.type {
 	/*background-color: rgba(0,0,0,.6);*/
 	cursor: pointer;
 	border: inset 2px;
@@ -737,7 +738,7 @@ div.Move.active {
 	/*background: rgba(0,0,0,.6);*/
 }
 
-.Normal 	{background: linear-gradient(rgba(255,255,255,.7), #A8A77A, rgba(0,0,0,.9));}
+/*.Normal 	{background: linear-gradient(rgba(255,255,255,.7), #A8A77A, rgba(0,0,0,.9));}
 .Fire 		{background: linear-gradient(rgba(255,255,255,.7), #EE8130, rgba(0,0,0,.9));}
 .Water 	{background: linear-gradient(rgba(255,255,255,.7), #6390F0, rgba(0,0,0,.9));}
 .Electric 	{background: linear-gradient(rgba(255,255,255,.7), #F7D02C, rgba(0,0,0,.9));}
@@ -754,7 +755,26 @@ div.Move.active {
 .Dragon 	{background: linear-gradient(rgba(255,255,255,.7), #6F35FC, rgba(0,0,0,.9));}
 .Dark 		{background: linear-gradient(rgba(255,255,255,.7), #705746, rgba(0,0,0,.9));}
 .Steel 	{background: linear-gradient(rgba(255,255,255,.7), #B7B7CE, rgba(0,0,0,.9));}
-.Fairy 	{background: linear-gradient(rgba(255,255,255,.7), #D685AD, rgba(0,0,0,.9));}
+.Fairy 	{background: linear-gradient(rgba(255,255,255,.7), #D685AD, rgba(0,0,0,.9));}*/
+
+.Normal 	{background: #A8A77A;}
+.Fire 		{background: #EE8130;}
+.Water 	{background: #6390F0;}
+.Electric 	{background: #F7D02C;}
+.Grass 	{background: #7AC74C;}
+.Ice 		{background: #96D9D6;}
+.Fighting 	{background: #C22E28;}
+.Poison 	{background: #A33EA1;}
+.Ground 	{background: #E2BF65;}
+.Flying 	{background: #A98FF3;}
+.Psychic 	{background: #F95587;}
+.Bug 		{background: #A6B91A;}
+.Rock 		{background: #B6A136;}
+.Ghost 	{background: #735797;}
+.Dragon 	{background: #6F35FC;}
+.Dark 		{background: #705746;}
+.Steel 	{background: #B7B7CE;}
+.Fairy 	{background: #D685AD;}
 
 .Type.Normal, .Normal.active 		{background: #A8A77A;}
 .Type.Fire, .Fire.active 			{background: #EE8130;}
@@ -1004,6 +1024,8 @@ div.Move.active {
 	font-family: Helvetica, Arial;
 	font-variant: small-caps;
 	border-radius: 10px 0;
+	text-shadow: #000 1px 1px;
+	stroke: 1px solid #000;
 }
 
 #PokeStats .Right .Value {
@@ -1060,7 +1082,19 @@ div.Move.active {
 	margin: .5em auto;
 	border-radius: 15px;
 	text-align: left;
-	text-indent: 10%;
+	text-indent: 15%;
+	text-shadow: #000 1px 1px;
+	line-height: 26px;
+}
+
+.Move img.type {
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	transform: translate(0);
+	height: 28px;
+	border: outset 2px;
+	border-radius: 50%;
 }
 
 #PokeStats .blank {

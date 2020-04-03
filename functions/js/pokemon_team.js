@@ -28,7 +28,7 @@
 				url: "./functions/php/pokemonTeam.php",
 				data: {action: 'viewStats', poke: $(poke).data('slot')},
 			}).done(function(data) {
-				// console.log(data);
+				console.log(data);
 				$(data.data).appendTo('#ViewPort').fadeIn(300);
 				$('#PokeStats .MoveSet').sortable({
 					helper: 'clone',

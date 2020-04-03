@@ -9,7 +9,7 @@ $team = json_decode(file_get_contents($file));
 
 
 // if($debug === true)
-	unset($team);
+	// unset($team);
 
 
 
