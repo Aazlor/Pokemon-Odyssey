@@ -266,11 +266,12 @@ $(function(){
 			var poke = $(this).data('poke');
 			$.ajax({
 				type: "POST",
-				dataType: "json",
+				// dataType: "json",
 				url: "./functions/php/combat.php",
 				data: {move: move, poke: poke, action: 'attack'},
 			}).done(function(data) {
 				console.log(data);
+				var data = JSON.parse(data);
 				combat.resolveAttacks(data, 0);
 				return false;
 			});

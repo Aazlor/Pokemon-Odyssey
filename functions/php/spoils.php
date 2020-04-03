@@ -1,6 +1,6 @@
 <?
 
-function levelUp($poke, $redrawEXP){
+function levelUp($poke){
 	global $mysqli, $replyData;
 	$query = "SELECT * FROM pokemon WHERE id = '$poke[number]'";
 	$get = $mysqli->query($query);
@@ -29,8 +29,8 @@ function levelUp($poke, $redrawEXP){
 
 	//Evolve
 	if(stristr($pokeStats[evolve_param], 'Level/')){
-		// if($poke[level] >= 1){		#Dev to level after every fight
-		if($poke[level] >= str_replace('Level/', '', $pokeStats[evolve_param])){
+		if($poke[level] >= 1){		#Dev to level after every fight
+		// if($poke[level] >= str_replace('Level/', '', $pokeStats[evolve_param])){
 			$replyData[] = ['type' => 'text', 'text' => $poke[nickname].' is evolving.', 'action' => 'evolve'];
 			$replyData[] = ['type' => 'evolve', 'to' => $pokeStats[evolve_to], 'from' => $poke[number], 'poke' => $poke[uuid]];
 			
@@ -87,9 +87,9 @@ function calcExp($aPoke, $dPoke, $num, $draw){
 	$replyData[] = ['type' => 'text', 'text' => $aPoke['nickname'].' gained '.$exp_per.' exp.'];
 
 	$aPoke[exp] += $exp_per;
-	if($aPoke[exp] >= $aPoke[exp_to_lvl]){
+	// if($aPoke[exp] >= $aPoke[exp_to_lvl]){
 		$aPoke = levelUp($aPoke);
-	}
+	// }
 
 	$aPoke = updateTotals($aPoke);
 

@@ -27,8 +27,8 @@ var AABB = {
 var checkEncounter = function(){
 	$.each($('.encounter'), function(index){
 		if((AABB.collide('Trainer', this, index) || AABB.inside('Trainer', this) ) && window.inCombat != 1){
-			// var int = randomInt(0, 1000);	//	Production
-			var int = randomInt(0, 1);		//	Development
+			var int = randomInt(0, 1000);	//	Production
+			// var int = randomInt(0, 1);		//	Development
 			// var int = randomInt(0, 100);		//	Psuedo-Testing
 
 			if(int == 0){
@@ -40,11 +40,11 @@ var checkEncounter = function(){
 
 				$.ajax({
 					type: "POST",
-					// dataType: "json",
+					dataType: "json",
 					url: "./functions/php/wild_encounter.php",
 					data: {playerID: 1, route: route},
 				}).done(function(msg) {
-					console.log(msg);
+					// console.log(msg);
 					combat.start(msg);
 				});
 			}

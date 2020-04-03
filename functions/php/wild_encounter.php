@@ -149,7 +149,7 @@ if($_POST['route'] != ''){
 
 	///BUILD ENCOUNTER AND RETURN JSON OF POKE
 	$wildEncounter = new wildEncounter;
-	$wildEncounter->build($pokeStats, $level, $nature);
+	$wildEncounter->build($pokeStats, $level, $nature, $mysqli);
 	echo json_encode($wildEncounter->return_data);
 
 };

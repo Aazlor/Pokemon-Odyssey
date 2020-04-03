@@ -1129,6 +1129,8 @@ CREATE TABLE IF NOT EXISTS `pokemon` (
   `pokedex_color` varchar(20) DEFAULT NULL,
   `height` varchar(50) DEFAULT NULL,
   `weight` varchar(50) DEFAULT NULL,
+  `evolve_param` varchar(50) DEFAULT NULL,
+  `evolve_to` varchar(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

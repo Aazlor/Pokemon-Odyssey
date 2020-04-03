@@ -9,7 +9,7 @@
 	src: url('fonts/Pokemon GB.ttf'); /*URL to font*/
 }
 
-body {
+html, body {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -17,9 +17,11 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 	display: block;
-	position: relative;
+	position: fixed;
 	width: 100vw;
 	height: 100vh;
+	min-width: 100vw;
+	min-height: 100vh;
 	font-family: 'PokemonGB';
 	font-size: 12px;
 	cursor: default;
@@ -1175,6 +1177,9 @@ div.Move.active {
 #Evolution .hiddenBG.Dark 		{background: radial-gradient(ellipse at center, #fff 30%, #705746 100%);}
 #Evolution .hiddenBG.Steel 		{background: radial-gradient(ellipse at center, #fff 30%, #B7B7CE 100%);}
 #Evolution .hiddenBG.Fairy 		{background: radial-gradient(ellipse at center, #fff 30%, #D685AD 100%);}
+
+/*#Evolution .hiddenBG.Bug 		{background: radial-gradient(ellipse at center, #fff 30%, #A6B91A 40%, #A33EA1 70%);}*/
+
 
 #Evolution .hiddenBG.transform {
 	top: 0;

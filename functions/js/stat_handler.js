@@ -56,7 +56,7 @@
 
 		combatStep = 'Evolution';
 
-		var html = '<div id="Evolution"><div class="hiddenBG Grass"></div><div class="Poke"><img src="sprites/pokemon/battle/'+data.from+'/front.gif"><div><div>';
+		var html = '<div id="Evolution"><div class="hiddenBG Bug"></div><div class="Poke"><img src="sprites/pokemon/battle/'+data.from+'/front.gif"><div><div>';
 		$('body').append(html);
 		$('#ViewPort').addClass('fade');
 
